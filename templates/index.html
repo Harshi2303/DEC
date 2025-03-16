@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Info App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Movie Information App</h1>
+
+        <!-- Search Movie Cast -->
+        <div class="section">
+            <h2>Search Movie Cast</h2>
+            <input type="text" id="movieName" placeholder="Enter movie name">
+            <button onclick="getMovieCast()">Search</button>
+            <div id="movieCastResult"></div>
+        </div>
+
+        <!-- Search Movies by Cast -->
+        <div class="section">
+            <h2>Search Movies by Cast Member</h2>
+            <input type="text" id="castName" placeholder="Enter cast name">
+            <button onclick="searchByCast()">Search</button>
+            <div id="castMoviesResult"></div>
+        </div>
+
+        <!-- Fetch Movie Ratings -->
+        <div class="section">
+            <h2>Get Movie Ratings</h2>
+            <input type="text" id="movieIdRatings" placeholder="Enter IMDb ID">
+            <button onclick="getMovieRatings()">Get Ratings</button>
+            <div id="ratingsResult"></div>
+        </div>
+
+        <!-- Fetch Movie Director -->
+        <div class="section">
+            <h2>Get Movie Director</h2>
+            <input type="text" id="movieIdDirector" placeholder="Enter IMDb ID">
+            <button onclick="getMovieDirector()">Get Director</button>
+            <div id="directorResult"></div>
+        </div>
+
+        <!-- Fetch Movie Genre -->
+        <div class="section">
+            <h2>Get Movie Genre</h2>
+            <input type="text" id="movieIdGenre" placeholder="Enter IMDb ID">
+            <button onclick="getMovieGenre()">Get Genre</button>
+            <div id="genreResult"></div>
+        </div>
+
+        <!-- Fetch Top 10 Movies -->
+        <div class="section">
+            <h2>Top 10 Movies</h2>
+            <button onclick="getTopMovies()">Show Top 10 Movies</button>
+            <div id="topMoviesResult"></div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
